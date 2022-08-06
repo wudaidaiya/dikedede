@@ -28,8 +28,7 @@
       <el-button size="medium" type="primary">工单配置</el-button>
     </div>
     <el-table :data="tableData" :border="false" style="width: 100%">
-      <el-table-column type="index" label="序号" width="80">
-      </el-table-column>
+      <el-table-column type="index" label="序号" width="80"> </el-table-column>
       <el-table-column prop="innerCode" label="工单编号" width="160">
       </el-table-column>
       <el-table-column prop="taskCode" label="设备编号" width="160">
@@ -50,6 +49,9 @@
         </template>
       </el-table-column>
     </el-table>
+    <div class="block">
+      <el-pagination layout="prev, pager, next" :total="1000"> </el-pagination>
+    </div>
   </div>
 </template>
 
@@ -83,4 +85,10 @@ export default {
 .box1 {
   margin: 50px 20px 0 20px;
 }
+.block{
+  margin-left: 300px;
+}
+.el-pager li{
+    padding: 0px 30px;
+  }
 </style>
