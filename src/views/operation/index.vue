@@ -28,7 +28,7 @@
       <el-button size="medium" type="primary">工单配置</el-button>
     </div>
     <el-table :data="tableData" :border="false" style="width: 100%">
-      <el-table-column  prop="createType" label="序号" width="80">
+      <el-table-column type="index" label="序号" width="80">
       </el-table-column>
       <el-table-column prop="innerCode" label="工单编号" width="160">
       </el-table-column>
@@ -36,7 +36,7 @@
       </el-table-column>
       <el-table-column prop="taskType.typeName" label="工单类型" width="160">
       </el-table-column>
-      <el-table-column prop="taskType.typeId" label="工单方式" width="160">
+      <el-table-column prop="createType" label="工单方式" width="160">
       </el-table-column>
       <el-table-column prop="taskType.type" label="工单状态" width="170">
       </el-table-column>
@@ -59,6 +59,7 @@ export default {
   data() {
     return {
       tableData: [],
+      input: '',
     }
   },
   created() {
@@ -80,6 +81,6 @@ export default {
   width: 200px;
 }
 .box1 {
-  margin: 50px 20px;
+  margin: 50px 20px 0 20px;
 }
 </style>
